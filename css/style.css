@@ -269,6 +269,30 @@ button {
   color: #d23737;
 }
 
+.mfa-form {
+  width: 100%;
+  max-width: 100%;
+  padding: 0 30px;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  margin-bottom: 55px;
+  display: none;
+}
+
+@media (min-width: 768px) {
+  .mfa-form {
+    width: 420px;
+    max-width: 420px;
+    padding: 0;
+    margin-bottom: 0;
+  }
+}
+
+.mfa-form form {
+  width: 100%;
+  height: 100%;
+}
+
 .input-container {
   display: -webkit-box;
   display: -ms-flexbox;

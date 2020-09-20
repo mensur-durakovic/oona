@@ -29,8 +29,10 @@ function setActiveItem(newActiveItem) {
   activeItem = newActiveItem;
   $(".nav-item").removeClass("nav-item-active");
   $(".mobile-nav-icon-wrapper").removeClass("mobile-nav-icon-active");
+
   $(`#${newActiveItem}-nav-item`).addClass("nav-item-active");
   $(`#${newActiveItem}-mobile-nav-item`).addClass("mobile-nav-icon-active");
+
   console.log("newActiveItem", newActiveItem);
   console.log("activeItem", activeItem);
 
@@ -50,6 +52,19 @@ function toggleDropdownMenu() {
     dropdownMenuOpen = true;
     $(".header-venues-dropdown").addClass("header-venues-dropdown-visible");
   }
+}
+
+function goToMFA(e) {
+  console.log("goToMFA");
+  e.preventDefault();
+  $(".login-form").hide();
+  $(".mfa-form").show();
+}
+
+function goToDashboard(e) {
+  console.log("goToDashboard");
+  e.preventDefault();
+  window.location.href = "../pages/venues.html";
 }
 
 function submitForm() {
