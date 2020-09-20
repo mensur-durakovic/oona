@@ -1,0 +1,450 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Oona - Easy Sign In</title>
+    <link rel="icon" type="image/png" href="../assets/favicon.ico" />
+
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+
+    <link rel="stylesheet" href="../css/style.css">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+
+
+    <!-- Javascript -->
+    <script src="../js/main.js"></script>
+
+</head>
+
+<body>
+
+    <header class="header-venues">
+        <div class="header-venues-page">Dashboard</div>
+        <div class="header-venues-wrapper">
+            <img src="../assets/Ellipse 3.svg" alt="user avatar" onclick="toggleDropdownMenu()">
+            <span class="material-icons header-venues-wrapper-chevron" onclick="toggleDropdownMenu()"
+                id='dropdown-icon'>
+                expand_more
+            </span>
+            <div class="header-venues-dropdown">
+                <div class="header-venues-dropdown-item" onclick="toggleDropdownMenu()">
+                    <span class="material-icons">
+                        email
+                    </span>
+                    <a href="#">qwerty@gmail.com</a>
+                </div>
+                <div class="header-venues-dropdown-item" onclick="toggleDropdownMenu()">
+                    <span class="material-icons">
+                        account_circle
+                    </span>
+                    <a href="#">Profile</a>
+                </div>
+                <div class="header-venues-dropdown-item" onclick="toggleDropdownMenu()">
+                    <span class="material-icons">
+                        exit_to_app
+                    </span>
+                    <a href="../index.html">Logout</a>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <main class="layout-container">
+        <h1 class="dashboard-title"> Dashboard items </h1>
+        <div class="dashboard-grid">
+
+            <div class="dashboard-grid-item">
+                <div class="dashboard-grid-item-head">
+                    <div class="dashboard-grid-item-head-left">
+                        <img src="../assets/item.svg" alt="grid item">
+                        <div class="dashboard-grid-item-head-left-description">
+                            <span class="dashboard-grid-item-head-left-description-title">
+                                Artima
+                            </span>
+                            <span class="dashboard-grid-item-head-left-description-link">
+                                artima.com
+                            </span>
+                        </div>
+                    </div>
+                    <div class="dashboard-grid-item-head-disable">
+                        <a href="#">
+                            <img src="../assets/disabled3.svg" alt="grid item">
+                        </a>
+                    </div>
+                </div>
+                <div class="dashboard-grid-item-body">
+                    <img src="../assets/artima-facilities.jpg" alt="grid item">
+                </div>
+                <div class="dashboard-grid-item-footer">
+                    <a href="https://www.artima.com/"> artima.com</a>
+                </div>
+            </div>
+
+            <div class="dashboard-grid-item">
+                <div class="dashboard-grid-item-head">
+                    <div class="dashboard-grid-item-head-left">
+                        <img src="../assets/item.svg" alt="grid item">
+                        <div class="dashboard-grid-item-head-left-description">
+                            <span class="dashboard-grid-item-head-left-description-title">
+                                Royal Bank
+                            </span>
+                            <span class="dashboard-grid-item-head-left-description-link">
+                                royalbank.com
+                            </span>
+                        </div>
+                    </div>
+                    <div class="dashboard-grid-item-head-disable">
+
+                    </div>
+                </div>
+                <div class="dashboard-grid-item-body">
+                    <img src="../assets/royalbank.jpg" alt="grid item">
+                </div>
+                <div class="dashboard-grid-item-footer">
+                    <a href="https://www.artima.com/"> royalbank.com</a>
+                </div>
+            </div>
+
+            <div class="dashboard-grid-item">
+                <div class="dashboard-grid-item-head">
+                    <div class="dashboard-grid-item-head-left">
+                        <img src="../assets/item.svg" alt="grid item">
+                        <div class="dashboard-grid-item-head-left-description">
+                            <span class="dashboard-grid-item-head-left-description-title">
+                                MyCase
+                            </span>
+                            <span class="dashboard-grid-item-head-left-description-link">
+                                mycase.com
+                            </span>
+                        </div>
+                    </div>
+                    <div class="dashboard-grid-item-head-disable">
+
+                    </div>
+                </div>
+                <div class="dashboard-grid-item-body">
+                    <img src="../assets/mycase.jpg" alt="grid item">
+                </div>
+                <div class="dashboard-grid-item-footer">
+                    <a href="https://www.artima.com/"> mycase.com</a>
+                </div>
+            </div>
+
+            <div class="dashboard-grid-item">
+                <div class="dashboard-grid-item-head">
+                    <div class="dashboard-grid-item-head-left">
+                        <img src="../assets/item.svg" alt="grid item">
+                        <div class="dashboard-grid-item-head-left-description">
+                            <span class="dashboard-grid-item-head-left-description-title">
+                                Burnaby
+                            </span>
+                            <span class="dashboard-grid-item-head-left-description-link">
+                                burnaby.com
+                            </span>
+                        </div>
+                    </div>
+                    <div class="dashboard-grid-item-head-disable">
+
+                    </div>
+                </div>
+                <div class="dashboard-grid-item-body">
+                    <img src="../assets/burnaby.jpg" alt="grid item">
+                </div>
+                <div class="dashboard-grid-item-footer">
+                    <a href="https://www.artima.com/"> burnaby.com</a>
+                </div>
+            </div>
+
+            <div class="dashboard-grid-item">
+                <div class="dashboard-grid-item-head">
+                    <div class="dashboard-grid-item-head-left">
+                        <img src="../assets/item.svg" alt="grid item">
+                        <div class="dashboard-grid-item-head-left-description">
+                            <span class="dashboard-grid-item-head-left-description-title">
+                                Vancouver aquarium
+                            </span>
+                            <span class="dashboard-grid-item-head-left-description-link">
+                                vancouveraquarium.com
+                            </span>
+                        </div>
+                    </div>
+                    <div class="dashboard-grid-item-head-disable">
+
+                    </div>
+                </div>
+                <div class="dashboard-grid-item-body">
+                    <img src="../assets/burnaby.jpg" alt="grid item">
+                </div>
+                <div class="dashboard-grid-item-footer">
+                    <a href="https://www.artima.com/"> vancouveraquarium.com</a>
+                </div>
+            </div>
+
+            <div class="dashboard-grid-item">
+                <div class="dashboard-grid-item-head">
+                    <div class="dashboard-grid-item-head-left">
+                        <img src="../assets/item.svg" alt="grid item">
+                        <div class="dashboard-grid-item-head-left-description">
+                            <span class="dashboard-grid-item-head-left-description-title">
+                                Smartt
+                            </span>
+                            <span class="dashboard-grid-item-head-left-description-link">
+                                smartt.com
+                            </span>
+                        </div>
+                    </div>
+                    <div class="dashboard-grid-item-head-disable">
+                        <a href="#">
+                            <img src="../assets/disabled3.svg" alt="grid item">
+                        </a>
+                    </div>
+                </div>
+                <div class="dashboard-grid-item-body">
+                    <img src="../assets/smartt.jpg" alt="grid item">
+                </div>
+                <div class="dashboard-grid-item-footer">
+                    <a href="https://www.artima.com/"> smartt.com</a>
+                </div>
+            </div>
+
+            <div class="dashboard-grid-item">
+                <div class="dashboard-grid-item-head">
+                    <div class="dashboard-grid-item-head-left">
+                        <img src="../assets/item.svg" alt="grid item">
+                        <div class="dashboard-grid-item-head-left-description">
+                            <span class="dashboard-grid-item-head-left-description-title">
+                                Dell
+                            </span>
+                            <span class="dashboard-grid-item-head-left-description-link">
+                                dell.com
+                            </span>
+                        </div>
+                    </div>
+                    <div class="dashboard-grid-item-head-disable">
+
+                    </div>
+                </div>
+                <div class="dashboard-grid-item-body">
+                    <img src="../assets/dell.jpg" alt="grid item">
+                </div>
+                <div class="dashboard-grid-item-footer">
+                    <a href="https://www.artima.com/"> dell.com</a>
+                </div>
+            </div>
+
+            <div class="dashboard-grid-item">
+                <div class="dashboard-grid-item-head">
+                    <div class="dashboard-grid-item-head-left">
+                        <img src="../assets/item.svg" alt="grid item">
+                        <div class="dashboard-grid-item-head-left-description">
+                            <span class="dashboard-grid-item-head-left-description-title">
+                                Fitbit
+                            </span>
+                            <span class="dashboard-grid-item-head-left-description-link">
+                                fitbit.com
+                            </span>
+                        </div>
+                    </div>
+                    <div class="dashboard-grid-item-head-disable">
+                        <a href="#">
+                            <img src="../assets/disabled3.svg" alt="grid item">
+                        </a>
+                    </div>
+                </div>
+                <div class="dashboard-grid-item-body">
+                    <img src="../assets/fitbit.jpg" alt="grid item">
+                </div>
+                <div class="dashboard-grid-item-footer">
+                    <a href="https://www.artima.com/"> fitbit.com</a>
+                </div>
+            </div>
+
+            <div class="dashboard-grid-item">
+                <div class="dashboard-grid-item-head">
+                    <div class="dashboard-grid-item-head-left">
+                        <img src="../assets/item.svg" alt="grid item">
+                        <div class="dashboard-grid-item-head-left-description">
+                            <span class="dashboard-grid-item-head-left-description-title">
+                                LinkedIn
+                            </span>
+                            <span class="dashboard-grid-item-head-left-description-link">
+                                linkedin.com
+                            </span>
+                        </div>
+                    </div>
+                    <div class="dashboard-grid-item-head-disable">
+
+                    </div>
+                </div>
+                <div class="dashboard-grid-item-body">
+                    <img src="../assets/linkedin.jpg" alt="grid item">
+                </div>
+                <div class="dashboard-grid-item-footer">
+                    <a href="https://www.artima.com/"> linkedin.com</a>
+                </div>
+            </div>
+
+            <div class="dashboard-grid-item">
+                <div class="dashboard-grid-item-head">
+                    <div class="dashboard-grid-item-head-left">
+                        <img src="../assets/item.svg" alt="grid item">
+                        <div class="dashboard-grid-item-head-left-description">
+                            <span class="dashboard-grid-item-head-left-description-title">
+                                Roblox
+                            </span>
+                            <span class="dashboard-grid-item-head-left-description-link">
+                                roblox.com
+                            </span>
+                        </div>
+                    </div>
+                    <div class="dashboard-grid-item-head-disable">
+                        <a href="#">
+                            <img src="../assets/disabled3.svg" alt="grid item">
+                        </a>
+                    </div>
+                </div>
+                <div class="dashboard-grid-item-body">
+                    <img src="../assets/roblox.jpg" alt="grid item">
+                </div>
+                <div class="dashboard-grid-item-footer">
+                    <a href="https://www.artima.com/"> roblox.com</a>
+                </div>
+            </div>
+
+            <div class="dashboard-grid-item">
+                <div class="dashboard-grid-item-head">
+                    <div class="dashboard-grid-item-head-left">
+                        <img src="../assets/item.svg" alt="grid item">
+                        <div class="dashboard-grid-item-head-left-description">
+                            <span class="dashboard-grid-item-head-left-description-title">
+                                Flickr
+                            </span>
+                            <span class="dashboard-grid-item-head-left-description-link">
+                                flickr.com
+                            </span>
+                        </div>
+                    </div>
+                    <div class="dashboard-grid-item-head-disable">
+
+                    </div>
+                </div>
+                <div class="dashboard-grid-item-body">
+                    <img src="../assets/flickr.jpg" alt="grid item">
+                </div>
+                <div class="dashboard-grid-item-footer">
+                    <a href="https://www.artima.com/"> flickr.com</a>
+                </div>
+            </div>
+
+            <div class="dashboard-grid-item">
+                <div class="dashboard-grid-item-head">
+                    <div class="dashboard-grid-item-head-left">
+                        <img src="../assets/item.svg" alt="grid item">
+                        <div class="dashboard-grid-item-head-left-description">
+                            <span class="dashboard-grid-item-head-left-description-title">
+                                Wordpress
+                            </span>
+                            <span class="dashboard-grid-item-head-left-description-link">
+                                wordpress.com
+                            </span>
+                        </div>
+                    </div>
+                    <div class="dashboard-grid-item-head-disable">
+                        <a href="#">
+                            <img src="../assets/disabled3.svg" alt="grid item">
+                        </a>
+                    </div>
+                </div>
+                <div class="dashboard-grid-item-body">
+                    <img src="../assets/wordpress.jpg" alt="grid item">
+                </div>
+                <div class="dashboard-grid-item-footer">
+                    <a href="https://www.artima.com/"> wordpress.com</a>
+                </div>
+            </div>
+
+            <div class="dashboard-grid-item">
+                <div class="dashboard-grid-item-head">
+                    <div class="dashboard-grid-item-head-left">
+                        <img src="../assets/item.svg" alt="grid item">
+                        <div class="dashboard-grid-item-head-left-description">
+                            <span class="dashboard-grid-item-head-left-description-title">
+                                Mulgrave
+                            </span>
+                            <span class="dashboard-grid-item-head-left-description-link">
+                                mulgrave.com
+                            </span>
+                        </div>
+                    </div>
+                    <div class="dashboard-grid-item-head-disable">
+                    </div>
+                </div>
+                <div class="dashboard-grid-item-body">
+                    <img src="../assets/mulgrave.jpg" alt="grid item">
+                </div>
+                <div class="dashboard-grid-item-footer">
+                    <a href="https://www.artima.com/"> mulgrave.com</a>
+                </div>
+            </div>
+
+        </div>
+    </main>
+
+    <!-- DESKTOP NAVIGATION -->
+    <nav class="nav" onmouseover="toggleNavigation()" onmouseout="toggleNavigation()" id="desktop-nav">
+        <!-- this is logo showed when navigation is shrinked -->
+        <div class="nav-logo">
+            <img src="../assets/logo2.png" alt="logo">
+        </div>
+
+        <!-- this is logo showed when navigation is expanded -->
+        <div class="nav-logo2">
+            <img src="../assets/logo.png" alt="logo">
+        </div>
+        <a href="../pages/venues.html" class='nav-item' onclick="setActiveItem('dashboard')" id="dashboard-nav-item">
+            <div class='nav-icon-wrapper'>
+                <span class="material-icons">
+                    dashboard
+                </span>
+            </div>
+            <div class="nav-item-text unselectable" id="dashboard-nav-item-text">
+                Dashboard
+            </div>
+        </a>
+        <a class='nav-item' href="../pages/edit-profile.html" onclick="setActiveItem('profile-edit')"
+            id="profile-edit-nav-item">
+            <div class='nav-icon-wrapper'>
+                <span class="material-icons">
+                    account_circle
+                </span>
+            </div>
+            <div class="nav-item-text unselectable" id="profile-edit-nav-item-text">
+                Profile
+            </div>
+        </a>
+    </nav>
+
+    <!-- MOBILE NAVIGATION -->
+    <nav class="mobile-nav">
+        <div class="mobile-nav-icon-wrapper" onclick="setActiveItem('dashboard')" id="dashboard-mobile-nav-item">
+            <a href="./venues.html">
+                <span class="material-icons">
+                    dashboard
+                </span>
+            </a>
+        </div>
+        <div class="mobile-nav-icon-wrapper" onclick="setActiveItem('profile-edit')" id="profile-edit-mobile-nav-item">
+            <a href="./edit-profile.html">
+                <span class="material-icons">
+                    account_circle
+                </span>
+            </a>
+        </div>
+    </nav>
+
+</body>
+
+</html>

@@ -11,13 +11,14 @@
 </head>
 
 <body>
-    <header>
+    <header class="header">
         <div class="header-logo">
-            <img src="./assets/logo.png" alt="logo">
-            <span> Oona </span>
+            <a href="./index.html">
+                <img src="./assets/logo.png" alt="logo">
+            </a>
         </div>
         <div>
-            <a href="./index.html" class="header-button">Sign In</a>
+            <a href="./pages/venues.html" class="header-button">Sign In</a>
         </div>
     </header>
     <main class="container">
@@ -31,14 +32,16 @@
                 <form>
                     <div class="input-container">
                         <label>Email</label>
-                        <input type="email" placeholder="Your email goes here" autocomplete='email'>
+                        <input type="email" placeholder="Your email goes here" autocomplete='email' name='email'
+                            required>
                         <span class="material-icons input-container-icon">
                             email
                         </span>
                     </div>
                     <div class="input-container">
                         <label>Password</label>
-                        <input type="password" placeholder="Start typing" autocomplete='current-password'>
+                        <input type="password" placeholder="Start typing" autocomplete='current-password'
+                            name='password' required minlength="6">
                         <span class="material-icons input-container-icon">
                             lock
                         </span>
