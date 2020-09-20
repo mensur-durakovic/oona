@@ -757,8 +757,7 @@ button {
 }
 
 .layout-container-expanded {
-  left: 270px;
-  width: calc(100% - 270px);
+  font-size: inherit;
 }
 
 .dashboard-title {

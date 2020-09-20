@@ -297,6 +297,7 @@ button {
   transition: 0.2s;
   display: none;
   cursor: pointer;
+
   @media (min-width: 768px) {
     display: flex;
   }
@@ -574,8 +575,7 @@ button {
   }
 
   &-expanded {
-    left: 270px;
-    width: calc(100% - 270px);
+    font-size: inherit;
   }
 }
 
