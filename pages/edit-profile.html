@@ -60,36 +60,63 @@
             <div class="profile-form-wrapper">
                 <form id="edit-profile-form" onsubmit="return submitForm()">
                     <div class="input-container">
-                        <label>Email</label>
-                        <input type="email" placeholder="Your email goes here" autocomplete='email' name='email'
-                            required value="qwerty@gmail.com">
+                        <label class="input-container-input-label">Email</label>
+                        <input class="input-container-input" type="email" placeholder="Your email goes here"
+                            autocomplete='email' name='email' required value="qwerty@gmail.com">
                         <span class="material-icons input-container-icon">
                             email
                         </span>
                     </div>
                     <div class="input-container">
-                        <label>Current password</label>
-                        <input type="password" placeholder="Start typing" autocomplete='current-password'
-                            name='current-password' required minlength="6">
+                        <label class="input-container-input-label">Current password</label>
+                        <input class="input-container-input" type="password" placeholder="Start typing"
+                            autocomplete='current-password' name='current-password' required minlength="6">
                         <span class="material-icons input-container-icon">
                             lock
                         </span>
                     </div>
                     <div class="input-container">
-                        <label>New password</label>
-                        <input type="password" placeholder="Start typing" autocomplete='current-password'
-                            name='new-password' id='new-password' required minlength="6">
+                        <label class="input-container-input-label">New password</label>
+                        <input class="input-container-input" type="password" placeholder="Start typing"
+                            autocomplete='current-password' name='new-password' id='new-password' required
+                            minlength="6">
                         <span class="material-icons input-container-icon">
                             lock
                         </span>
                     </div>
                     <div class="input-container">
-                        <label>Repeat new password</label>
-                        <input type="password" placeholder="Start typing" name='repeat-password' id='repeat-password'
-                            required minlength="6">
+                        <label class="input-container-input-label">Repeat new password</label>
+                        <input class="input-container-input" type="password" placeholder="Start typing"
+                            name='repeat-password' id='repeat-password' required minlength="6">
                         <span class="material-icons input-container-icon">
                             lock
                         </span>
+                    </div>
+                    <div class="checkbox-container">
+                        <input id="c1" type="checkbox">
+                        <label for="c1">Checkbox</label>
+                    </div>
+                    <div class="radio-container">
+                        <div class="radio-container-group">
+                            <input id="r1" type="radio" name="radio" value="1">
+                            <label for="r1">Radio 1</label>
+                        </div>
+                        <div class="radio-container-group">
+                            <input id="r2" type="radio" name="radio" value="2">
+                            <label for="r2">Radio 2</label>
+                        </div>
+                        <div class="radio-container-group">
+                            <input id="r3" type="radio" name="radio" value="3">
+                            <label for="r3">Radio 3</label>
+                        </div>
+                    </div>
+                    <div class="radio-container">
+                        <select class="select-css">
+                            <option>Apples</option>
+                            <option>Bananas</option>
+                            <option>Grapes</option>
+                            <option>Oranges</option>
+                        </select>
                     </div>
                     <button type="submit" class="profile-form-submit">
                         Submit changes
@@ -125,7 +152,7 @@
     </div>
 
     <!-- DESKTOP NAVIGATION -->
-    <nav class="nav" onmouseover="toggleNavigation()" onmouseout="toggleNavigation()" id="desktop-nav">
+    <nav class="nav nav-expanded" id="desktop-nav" onmouseover="toggleNavigation()" onmouseout="toggleNavigation()">
         <!-- this is logo showed when navigation is shrinked -->
         <div class="nav-logo">
             <a href="../pages/venues.html">
@@ -136,10 +163,11 @@
         <!-- this is logo showed when navigation is expanded -->
         <div class="nav-logo2">
             <a href="../pages/venues.html">
-                <img src="../assets/logo.png" alt="logo">
+                <img src="../assets/logo2.png" alt="logo">
             </a>
+            <img src="../assets/logo-text.png" alt="logo text">
         </div>
-        <a class='nav-item' href="../pages/venues.html" onclick="setActiveItem('dashboard')" id="dashboard-nav-item">
+        <a href="../pages/venues.html" class='nav-item' onclick="setActiveItem('dashboard')" id="dashboard-nav-item">
             <div class='nav-icon-wrapper'>
                 <span class="material-icons">
                     dashboard

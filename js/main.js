@@ -9,13 +9,13 @@ function toggleNavigation() {
     $(".nav-item-text").addClass("nav-item-text-visible");
     $(".layout-container").addClass("layout-container-expanded");
     $(".nav-logo").hide();
-    $(".nav-logo2").show();
+    $(".nav-logo2").addClass("nav-logo2-visible");
   } else {
     $("#desktop-nav").removeClass("nav-expanded");
     $(".nav-item-text").removeClass("nav-item-text-visible");
     $(".layout-container").removeClass("layout-container-expanded");
     $(".nav-logo").show();
-    $(".nav-logo2").hide();
+    $(".nav-logo2").removeClass("nav-logo2-visible");
   }
 }
 function expandNavigation() {

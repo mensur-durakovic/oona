@@ -239,14 +239,7 @@ button {
   margin-bottom: 15px;
   width: 100%;
 
-  label {
-    margin-bottom: 8px;
-    font-size: 14px;
-    line-height: 21px;
-    color: #8083a3;
-  }
-
-  input {
+  &-input {
     font-weight: bold;
     font-size: 16px;
     line-height: 19px;
@@ -270,6 +263,13 @@ button {
       font-style: normal;
       font-size: 16px;
       line-height: 19px;
+      color: #8083a3;
+    }
+
+    &-label {
+      margin-bottom: 8px;
+      font-size: 14px;
+      line-height: 21px;
       color: #8083a3;
     }
   }
@@ -371,12 +371,6 @@ button {
     -moz-user-select: none;
     -webkit-user-select: none;
     user-select: none;
-    width: 40px;
-    min-width: 40px;
-    max-width: 40px;
-    height: 40px;
-    min-height: 40px;
-    max-height: 40px;
 
     img {
       min-width: 40px;
@@ -389,26 +383,39 @@ button {
 
   &-logo2 {
     display: none;
+    align-items: center;
     position: absolute;
     top: 22px;
     left: 22px;
     -moz-user-select: none;
     -webkit-user-select: none;
     user-select: none;
-    width: 105px;
-    min-width: 105px;
-    max-width: 105px;
-    height: 40px;
-    min-height: 40px;
-    max-height: 40px;
+    flex-direction: row;
 
-    img {
-      width: 105px;
-      min-width: 105px;
-      max-width: 105px;
+    &-visible {
+      display: flex;
+    }
+
+    a {
+      min-width: 40px;
+      max-width: 40px;
       height: 40px;
       min-height: 40px;
       max-height: 40px;
+      img {
+        min-width: 40px;
+        max-width: 40px;
+        height: 40px;
+        min-height: 40px;
+        max-height: 40px;
+      }
+    }
+
+    & > img {
+      height: 30px;
+      min-height: 30px;
+      max-height: 30px;
+      margin-left: 5px;
     }
   }
 
@@ -581,17 +588,82 @@ button {
 
 .dashboard {
   &-title {
-    margin-bottom: 35px;
-    margin-left: 10px;
-    font-weight: bold;
-    font-size: 32px;
-    line-height: 42px;
-    text-align: center;
-    color: #1a1c1d;
-    max-width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-direction: column;
 
     @media (min-width: 768px) {
-      text-align: left;
+      flex-direction: row;
+      align-items: center;
+      justify-content: space-between;
+    }
+
+    &-text {
+      margin-bottom: 35px;
+
+      font-weight: bold;
+      font-size: 32px;
+      line-height: 42px;
+      text-align: center;
+      color: #1a1c1d;
+      max-width: 100%;
+
+      @media (min-width: 768px) {
+        margin-left: 10px;
+        text-align: left;
+      }
+    }
+
+    &-search {
+      display: flex;
+      flex-direction: column;
+      align-items: flex-start;
+      justify-content: flex-start;
+      position: relative;
+      margin-bottom: 35px;
+
+      label {
+        margin-bottom: 8px;
+        font-size: 14px;
+        line-height: 21px;
+        color: #8083a3;
+      }
+
+      input {
+        font-weight: bold;
+        font-size: 16px;
+        line-height: 19px;
+        color: #1a1c1d;
+        border: 0;
+        outline: 0;
+        padding-left: 30px;
+        height: 40px;
+        min-height: 40px;
+        border-bottom: 1px solid #eceef5;
+        display: flex;
+        align-items: center;
+        justify-content: flex-start;
+
+        &:focus {
+          border-bottom: 1px solid #1a1c1d;
+        }
+
+        &::placeholder {
+          font-family: "Lato", sans-serif;
+          font-style: normal;
+          font-size: 16px;
+          line-height: 19px;
+          color: #8083a3;
+          padding-left: 30px;
+        }
+      }
+
+      &-icon {
+        position: absolute;
+        bottom: 10px;
+        left: 0;
+      }
     }
   }
 
@@ -980,4 +1052,233 @@ button {
       transition: 0.2s;
     }
   }
+}
+
+.checkbox-container {
+  display: flex;
+  align-items: flex-start;
+  justify-content: flex-start;
+  position: relative;
+  margin-bottom: 15px;
+  width: 100%;
+}
+
+.radio-container {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: flex-start;
+  position: relative;
+  margin-bottom: 15px;
+  width: 100%;
+
+  &-group {
+    margin-bottom: 5px;
+  }
+}
+
+input[type="checkbox"],
+input[type="radio"] {
+  --active: #d23737;
+  --active-inner: #fff;
+  --focus: 2px rgba(39, 94, 254, 0.3);
+  --border: #bbc1e1;
+  --border-hover: #d23737;
+  --background: #fff;
+  --disabled: #f6f8ff;
+  --disabled-inner: #e1e6f9;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  height: 21px;
+  outline: none;
+  display: inline-block;
+  vertical-align: top;
+  position: relative;
+  margin: 0;
+  cursor: pointer;
+  border: 1px solid var(--bc, var(--border));
+  background: var(--b, var(--background));
+  transition: background 0.3s, border-color 0.3s, box-shadow 0.2s;
+  &:after {
+    content: "";
+    display: block;
+    left: 0;
+    top: 0;
+    position: absolute;
+    transition: transform var(--d-t, 0.3s) var(--d-t-e, ease),
+      opacity var(--d-o, 0.2s);
+  }
+  &:checked {
+    --b: var(--active);
+    --bc: var(--active);
+    --d-o: 0.3s;
+    --d-t: 0.6s;
+    --d-t-e: cubic-bezier(0.2, 0.85, 0.32, 1.2);
+  }
+  &:disabled {
+    --b: var(--disabled);
+    cursor: not-allowed;
+    opacity: 0.9;
+    &:checked {
+      --b: var(--disabled-inner);
+      --bc: var(--border);
+    }
+    & + label {
+      cursor: not-allowed;
+    }
+  }
+  &:hover {
+    &:not(:checked) {
+      &:not(:disabled) {
+        --bc: var(--border-hover);
+      }
+    }
+  }
+  &:focus {
+    box-shadow: 0 0 0 var(--focus);
+  }
+  &:not(.switch) {
+    width: 21px;
+    &:after {
+      opacity: var(--o, 0);
+    }
+    &:checked {
+      --o: 1;
+    }
+  }
+  & + label {
+    font-size: 14px;
+    line-height: 21px;
+    display: inline-block;
+    vertical-align: top;
+    cursor: pointer;
+    margin-left: 4px;
+  }
+}
+input[type="checkbox"] {
+  &:not(.switch) {
+    border-radius: 7px;
+    &:after {
+      width: 5px;
+      height: 9px;
+      border: 2px solid var(--active-inner);
+      border-top: 0;
+      border-left: 0;
+      left: 6px;
+      top: 2px;
+      transform: rotate(var(--r, 20deg));
+    }
+    &:checked {
+      --r: 43deg;
+    }
+  }
+  &.switch {
+    width: 38px;
+    border-radius: 11px;
+    &:after {
+      left: 2px;
+      top: 2px;
+      border-radius: 50%;
+      width: 15px;
+      height: 15px;
+      background: var(--ab, var(--border));
+      transform: translateX(var(--x, 0));
+    }
+    &:checked {
+      --ab: var(--active-inner);
+      --x: 17px;
+    }
+    &:disabled {
+      &:not(:checked) {
+        &:after {
+          opacity: 0.6;
+        }
+      }
+    }
+  }
+}
+input[type="radio"] {
+  border-radius: 50%;
+  &:after {
+    width: 19px;
+    height: 19px;
+    border-radius: 50%;
+    background: var(--active-inner);
+    opacity: 0;
+    transform: scale(var(--s, 0.7));
+  }
+  &:checked {
+    --s: 0.5;
+  }
+}
+
+.select-css {
+  display: block;
+  font-size: 16px;
+  font-family: "Lato", sans-serif;
+  font-weight: 700;
+  color: #1a1c1d;
+  line-height: 1.3;
+  padding: 0.6em 1.4em 0.5em 0.8em;
+  width: 100%;
+  max-width: 100%; /* useful when width is set to anything other than 100% */
+  box-sizing: border-box;
+  margin: 0;
+  border: 1px solid #eceef5;
+  box-shadow: 0 1px 0 1px rgba(0, 0, 0, 0.04);
+  border-radius: 0.5em;
+  -moz-appearance: none;
+  -webkit-appearance: none;
+  appearance: none;
+  background-color: #fff;
+  /* note: bg image below uses 2 urls. The first is an svg data uri for the arrow icon, and the second is the gradient. 
+  for the icon, if you want to change the color, be sure to use `%23` instead of `#`, since it's a url. You can also swap in a different svg icon or an external image reference
+  
+  */
+  background-image: url("data:image/svg+xml;charset=US-ASCII,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20width%3D%22292.4%22%20height%3D%22292.4%22%3E%3Cpath%20fill%3D%22%23007CB2%22%20d%3D%22M287%2069.4a17.6%2017.6%200%200%200-13-5.4H18.4c-5%200-9.3%201.8-12.9%205.4A17.6%2017.6%200%200%200%200%2082.2c0%205%201.8%209.3%205.4%2012.9l128%20127.9c3.6%203.6%207.8%205.4%2012.8%205.4s9.2-1.8%2012.8-5.4L287%2095c3.5-3.5%205.4-7.8%205.4-12.8%200-5-1.9-9.2-5.5-12.8z%22%2F%3E%3C%2Fsvg%3E");
+  background-repeat: no-repeat, repeat;
+  /* arrow icon position (1em from the right, 50% vertical) , then gradient position*/
+  background-position: right 0.7em top 50%, 0 0;
+  /* icon size, then gradient */
+  background-size: 0.65em auto, 100%;
+  outline: none;
+}
+/* Hide arrow icon in IE browsers */
+.select-css::-ms-expand {
+  display: none;
+}
+/* Hover style */
+.select-css:hover {
+  border-color: #888;
+}
+/* Focus style */
+.select-css:focus {
+  border-color: #aaa;
+  color: #222;
+  outline: none;
+}
+
+/* Set options to normal weight */
+.select-css option {
+  font-weight: normal;
+}
+
+/* Support for rtl text, explicit support for Arabic and Hebrew */
+*[dir="rtl"] .select-css,
+:root:lang(ar) .select-css,
+:root:lang(iw) .select-css {
+  background-position: left 0.7em top 50%, 0 0;
+  padding: 0.6em 0.8em 0.5em 1.4em;
+}
+
+/* Disabled styles */
+.select-css:disabled,
+.select-css[aria-disabled="true"] {
+  color: gray;
+  background-image: url("data:image/svg+xml;charset=US-ASCII,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20width%3D%22292.4%22%20height%3D%22292.4%22%3E%3Cpath%20fill%3D%22graytext%22%20d%3D%22M287%2069.4a17.6%2017.6%200%200%200-13-5.4H18.4c-5%200-9.3%201.8-12.9%205.4A17.6%2017.6%200%200%200%200%2082.2c0%205%201.8%209.3%205.4%2012.9l128%20127.9c3.6%203.6%207.8%205.4%2012.8%205.4s9.2-1.8%2012.8-5.4L287%2095c3.5-3.5%205.4-7.8%205.4-12.8%200-5-1.9-9.2-5.5-12.8z%22%2F%3E%3C%2Fsvg%3E");
+}
+
+.select-css:disabled:hover,
+.select-css[aria-disabled="true"] {
+  border-color: #aaa;
 }
