@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Oona - Easy Sign In</title>
+    <link rel="icon" type="image/png" href="../assets/favicon.ico" />
+
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <!-- jQuery Modal -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-modal/0.9.1/jquery.modal.min.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/jquery-modal/0.9.1/jquery.modal.min.css" />
+
+    <link rel="stylesheet" href="../css/style.css">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+
+
+    <!-- Javascript -->
+    <script src="../js/main.js"></script>
+</head>
+
+<body>
+
+    <header class="header-venues">
+        <div class="header-venues-page">Dashboard</div>
+        <div class="header-venues-wrapper">
+            <img src="../assets/Ellipse 3.svg" alt="user avatar" onclick="toggleDropdownMenu()">
+            <span class="material-icons header-venues-wrapper-chevron" onclick="toggleDropdownMenu()"
+                id='dropdown-icon'>
+                expand_more
+            </span>
+            <div class="header-venues-dropdown">
+                <div class="header-venues-dropdown-item" onclick="toggleDropdownMenu()">
+                    <span class="material-icons">
+                        email
+                    </span>
+                    <a href="#">qwerty@gmail.com</a>
+                </div>
+                <div class="header-venues-dropdown-item" onclick="toggleDropdownMenu()">
+                    <span class="material-icons">
+                        account_circle
+                    </span>
+                    <a href="#">Profile</a>
+                </div>
+                <div class="header-venues-dropdown-item" onclick="toggleDropdownMenu()">
+                    <span class="material-icons">
+                        exit_to_app
+                    </span>
+                    <a href="../index.html">Logout</a>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <main class="layout-container">
+        <div class="dashboard-title">
+            <div class="dashboard-title-text">
+                Item details
+            </div>
+        </div>
+        <div class="show-details">
+
+            <div class="show-details-content">
+                <div class="show-details-head">
+                    <div class="show-details-head-info">
+                        <div class="show-details-head-info-head">
+                            <div>
+                                <h1>Artima</h1>
+                                <h3><a href="http://artima.com" target="_blank">artima.com</a></h3>
+                            </div>
+                            <div class="show-details-head-edit">
+                                <button onclick="editItem()">
+                                    <span>Edit</span>
+                                    <span class="material-icons show-details-head-edit-icon">create</span>
+                                </button>
+                            </div>
+                        </div>
+                        <img src="../assets/artima-facilities.jpg" alt="grid item">
+                    </div>
+                </div>
+                <div class="show-details-body">
+                    <div class="show-details-body-item">
+                        <div class="show-details-body-item-title">Username:</div>
+                        <div class="show-details-body-item-text">sonnychee@gmail.com</div>
+                    </div>
+                    <div class="show-details-body-item">
+                        <div class="show-details-body-item-title">Password: </div>
+                        <div class="show-details-body-item-text">bluecheese</div>
+                    </div>
+                    <div class="show-details-body-item">
+                        <div class="show-details-body-item-title">Updated At: </div>
+                        <div class="show-details-body-item-text"> 2020-11-06T10:32:16-08:00</div>
+                    </div>
+                    <div class="show-details-body-item">
+                        <div class="show-details-body-item-title">Login At: </div>
+                        <div class="show-details-body-item-text">
+                            <a href="https://www.artima.com/sign-in">https://www.artima.com/sign-in</a>
+                        </div>
+                    </div>
+                    <div class="show-details-body-item">
+                        <div class="show-details-body-item-title">Venue ID: </div>
+                        <div class="show-details-body-item-text">
+                            <a href="https://www.artima.com">artima.com</a>
+                        </div>
+                    </div>
+                    <div class="show-details-body-item">
+                        <div class="show-details-body-item-title">Name: </div>
+                        <div class="show-details-body-item-text">
+                            Artima
+                        </div>
+                    </div>
+                    <div class="show-details-body-item">
+                        <div class="show-details-body-item-title">Change Password At: </div>
+                        <div class="show-details-body-item-text">
+                            <a href="https://www.artima.com/change-password">https://www.artima.com/change-password</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </main>
+
+    <!-- DESKTOP NAVIGATION -->
+    <nav class="nav" id="desktop-nav" onmouseover="toggleNavigation()" onmouseout="toggleNavigation()">
+        <!-- this is logo showed when navigation is shrinked -->
+        <div class="nav-logo">
+            <a href="../pages/venues.html">
+                <img src="../assets/logo2.png" alt="logo">
+            </a>
+        </div>
+
+        <!-- this is logo showed when navigation is expanded -->
+        <div class="nav-logo2">
+            <a href="../pages/venues.html">
+                <img src="../assets/logo2.png" alt="logo">
+            </a>
+            <img src="../assets/logo-text.png" alt="logo text">
+        </div>
+        <a href="../pages/venues.html" class='nav-item' onclick="setActiveItem('dashboard')" id="dashboard-nav-item">
+            <div class='nav-icon-wrapper'>
+                <span class="material-icons">
+                    dashboard
+                </span>
+            </div>
+            <div class="nav-item-text unselectable" id="dashboard-nav-item-text">
+                Dashboard
+            </div>
+        </a>
+        <a class='nav-item' href="../pages/edit-profile.html" onclick="setActiveItem('profile-edit')"
+            id="profile-edit-nav-item">
+            <div class='nav-icon-wrapper'>
+                <span class="material-icons">
+                    account_circle
+                </span>
+            </div>
+            <div class="nav-item-text unselectable" id="profile-edit-nav-item-text">
+                Profile
+            </div>
+        </a>
+    </nav>
+
+    <!-- MOBILE NAVIGATION -->
+    <nav class="mobile-nav">
+        <div class="mobile-nav-icon-wrapper" onclick="setActiveItem('dashboard')" id="dashboard-mobile-nav-item">
+            <a href="./venues.html">
+                <span class="material-icons">
+                    dashboard
+                </span>
+            </a>
+        </div>
+        <div class="mobile-nav-icon-wrapper" onclick="setActiveItem('profile-edit')" id="profile-edit-mobile-nav-item">
+            <a href="./edit-profile.html">
+                <span class="material-icons">
+                    account_circle
+                </span>
+            </a>
+        </div>
+    </nav>
+</body>
+
+</html>

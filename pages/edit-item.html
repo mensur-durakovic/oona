@@ -1,0 +1,327 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Oona - Easy Sign In</title>
+    <link rel="icon" type="image/png" href="../assets/favicon.ico" />
+
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <!-- jQuery Modal -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-modal/0.9.1/jquery.modal.min.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/jquery-modal/0.9.1/jquery.modal.min.css" />
+
+    <link rel="stylesheet" href="../css/style.css">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+
+
+    <!-- Javascript -->
+    <script src="../js/main.js"></script>
+</head>
+
+<body>
+
+    <header class="header-venues">
+        <div class="header-venues-page">Dashboard</div>
+        <div class="header-venues-wrapper">
+            <img src="../assets/Ellipse 3.svg" alt="user avatar" onclick="toggleDropdownMenu()">
+            <span class="material-icons header-venues-wrapper-chevron" onclick="toggleDropdownMenu()"
+                id='dropdown-icon'>
+                expand_more
+            </span>
+            <div class="header-venues-dropdown">
+                <div class="header-venues-dropdown-item" onclick="toggleDropdownMenu()">
+                    <span class="material-icons">
+                        email
+                    </span>
+                    <a href="#">qwerty@gmail.com</a>
+                </div>
+                <div class="header-venues-dropdown-item" onclick="toggleDropdownMenu()">
+                    <span class="material-icons">
+                        account_circle
+                    </span>
+                    <a href="#">Profile</a>
+                </div>
+                <div class="header-venues-dropdown-item" onclick="toggleDropdownMenu()">
+                    <span class="material-icons">
+                        exit_to_app
+                    </span>
+                    <a href="../index.html">Logout</a>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <main class="layout-container">
+        <div class="dashboard-title">
+            <div class="dashboard-title-text">
+                Edit Item
+            </div>
+        </div>
+        <div class="show-details">
+            <div class="show-details-content">
+                <div class="show-details-head">
+                    <div class="show-details-head-info">
+                        <div class="show-details-head-info-head">
+                            <div>
+                                <h1>Artima</h1>
+                                <h3><a href="http://artima.com" target="_blank">artima.com</a></h3>
+                            </div>
+
+                        </div>
+
+                        <img src="../assets/artima-facilities.jpg" alt="grid item">
+                    </div>
+                </div>
+                <div class="show-details-body">
+                    <form class="edit-item-form">
+                        <div class="edit-item-form-group">
+                            <div class="edit-item-form-group-title">Credentials</div>
+                            <div class="input-container-edit">
+                                <span class="tooltip">
+                                    <div class="tooltip-image"></div>
+                                    <span class="tooltip-text">This is tooltip that describes what this field is
+                                        about</span>
+                                </span>
+                                <label class="input-container-edit-input-label">Username:</label>
+                                <div class="input-container-edit-holder">
+                                    <input class="input-container-edit-input" type="email" autocomplete='email'
+                                        name='email' required>
+
+                                </div>
+                            </div>
+                            <div class="input-container-edit">
+                                <label class="input-container-edit-input-label">Password:</label>
+                                <div class="input-container-edit-holder">
+                                    <input class="input-container-edit-input" type="password" autocomplete='password'
+                                        name='password' required>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="edit-item-form-group">
+                            <div class="edit-item-form-group-title">Login elements</div>
+                            <div class="input-container-edit">
+                                <label class="input-container-edit-input-label">Login at:</label>
+                                <div class="input-container-edit-holder">
+                                    <input class="input-container-edit-input" type="text" name='login-at'>
+                                </div>
+                            </div>
+                            <div class="input-container-edit">
+                                <span class="tooltip">
+                                    <div class="tooltip-image"></div>
+                                    <span class="tooltip-text">This is tooltip that describes what this field is
+                                        about</span>
+                                </span>
+                                <label class="input-container-edit-input-label">Authenticates for:</label>
+                                <div class="input-container-edit-holder">
+                                    <input class="input-container-edit-input" type="text" name='authenticates-for'>
+                                </div>
+                            </div>
+                            <div class="input-container-edit">
+                                <label class="input-container-edit-input-label">Venue ID:</label>
+
+                                <div class="input-container-edit-holder">
+                                    <input class="input-container-edit-input" type="text" name='venue-id'>
+                                </div>
+                            </div>
+                            <div class="input-container-edit">
+                                <label class="input-container-edit-input-label">Name:</label>
+                                <div class="input-container-edit-holder">
+                                    <input class="input-container-edit-input" type="text" name='name' required>
+                                </div>
+                            </div>
+                            <div class="input-container-edit">
+                                <label class="input-container-edit-input-label">Predialog Selector:</label>
+                                <div class="input-container-edit-holder">
+                                    <input class="input-container-edit-input" type="text" name='predialog-selector'>
+                                </div>
+                            </div>
+                            <div class="input-container-edit">
+                                <label class="input-container-edit-input-label">Predialog Label:</label>
+                                <div class="input-container-edit-holder">
+                                    <input class="input-container-edit-input" type="text" name='predialog-label'>
+                                </div>
+                            </div>
+                            <div class="input-container-edit">
+                                <label class="input-container-edit-input-label">Predialog Selector Delay:</label>
+                                <div class="input-container-edit-holder">
+                                    <input class="input-container-edit-input" type="text"
+                                        name='predialog-selector-delay'>
+                                </div>
+                            </div>
+                            <div class="checkbox-container-edit">
+                                <label for="post-predialog-refresh">Post Predialog Refresh</label>
+                                <input type="checkbox" id="post-predialog-refresh" name="post-predialog-refresh">
+                            </div>
+                            <div class="input-container-edit">
+                                <label class="input-container-edit-input-label">Username Selector:</label>
+                                <div class="input-container-edit-holder">
+                                    <input class="input-container-edit-input" type="text" name='username-selector'>
+                                </div>
+                            </div>
+                            <div class="input-container-edit">
+                                <label class="input-container-edit-input-label">Username Change Delay:</label>
+                                <div class="input-container-edit-holder">
+                                    <input class="input-container-edit-input" type="text" name='username-change-delay'>
+                                </div>
+                            </div>
+                            <div class="input-container-edit">
+                                <label class="input-container-edit-input-label">Next Button Selector:</label>
+                                <div class="input-container-edit-holder">
+                                    <input class="input-container-edit-input" type="text" name='next-button-selector'>
+                                </div>
+                            </div>
+                            <div class="input-container-edit">
+                                <label class="input-container-edit-input-label">Password Selector:</label>
+                                <div class="input-container-edit-holder">
+                                    <input class="input-container-edit-input" type="text" name='password-selector'>
+                                </div>
+                            </div>
+                            <div class="input-container-edit">
+                                <label class="input-container-edit-input-label">Password Change Delay:</label>
+                                <div class="input-container-edit-holder">
+                                    <input class="input-container-edit-input" type="text" name='password-change-delay'>
+                                </div>
+                            </div>
+                            <div class="input-container-edit">
+                                <label class="input-container-edit-input-label">Login Button Selector:</label>
+                                <div class="input-container-edit-holder">
+                                    <input class="input-container-edit-input" type="text" name='login-button-selector'>
+                                </div>
+                            </div>
+                            <div class="input-container-edit">
+                                <label class="input-container-edit-input-label">Click This After Login Button:</label>
+                                <div class="input-container-edit-holder">
+                                    <input class="input-container-edit-input" type="text" name='click-this-after-login'>
+                                </div>
+                            </div>
+                            <div class="input-container-edit">
+                                <label class="input-container-edit-input-label">Replicate Credentials To This
+                                    Venue:</label>
+                                <div class="input-container-edit-holder">
+                                    <input class="input-container-edit-input" type="text" name='replicate-credentials'>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="edit-item-form-group">
+                            <div class="edit-item-form-group-title">Change password</div>
+                            <div class="input-container-edit">
+                                <label class="input-container-edit-input-label">Change Password At:</label>
+                                <div class="input-container-edit-holder">
+                                    <input class="input-container-edit-input" type="text" name='change-password-at'>
+                                </div>
+                            </div>
+                            <div class="input-container-edit">
+                                <label class="input-container-edit-input-label">Change Password Button/Link
+                                    Text:</label>
+                                <div class="input-container-edit-holder">
+                                    <input class="input-container-edit-input" type="text" name='change-password-button'>
+                                </div>
+                            </div>
+                            <div class="checkbox-container-edit">
+                                <label for="post-predialog-refresh">Remove All Cookies On Logout</label>
+                                <input type="checkbox" id="post-predialog-refresh" name="remove-cookies">
+                            </div>
+                            <div class="checkbox-container-edit">
+                                <label for="post-predialog-refresh">Protected by Captcha?</label>
+                                <input type="checkbox" id="post-predialog-refresh" name="protected-captcha">
+                            </div>
+
+                            <div class="input-container-edit">
+                                <label class="input-container-edit-input-label">Select animal:</label>
+                                <div class="input-container-edit-holder">
+                                    <div class="radio-container-group">
+                                        <input id="r1" type="radio" name="radio" value="1">
+                                        <label for="r1">Dog</label>
+                                    </div>
+                                    <div class="radio-container-group">
+                                        <input id="r2" type="radio" name="radio" value="2">
+                                        <label for="r2">Cat</label>
+                                    </div>
+                                    <div class="radio-container-group">
+                                        <input id="r3" type="radio" name="radio" value="3">
+                                        <label for="r3">Lion</label>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="input-container-edit">
+                                <label class="input-container-edit-input-label">Select fruit:</label>
+                                <div class="input-container-edit-holder">
+                                    <select class="select-css">
+                                        <option>Apples</option>
+                                        <option>Bananas</option>
+                                        <option>Grapes</option>
+                                        <option>Oranges</option>
+                                    </select>
+                                </div>
+                            </div>
+                        </div>
+                        <input class="edit-item-form-submit" type="submit" value="Save">
+                    </form>
+                </div>
+            </div>
+
+        </div>
+    </main>
+
+    <!-- DESKTOP NAVIGATION -->
+    <nav class="nav" id="desktop-nav" onmouseover="toggleNavigation()" onmouseout="toggleNavigation()">
+        <!-- this is logo showed when navigation is shrinked -->
+        <div class="nav-logo">
+            <a href="../pages/venues.html">
+                <img src="../assets/logo2.png" alt="logo">
+            </a>
+        </div>
+
+        <!-- this is logo showed when navigation is expanded -->
+        <div class="nav-logo2">
+            <a href="../pages/venues.html">
+                <img src="../assets/logo2.png" alt="logo">
+            </a>
+            <img src="../assets/logo-text.png" alt="logo text">
+        </div>
+        <a href="../pages/venues.html" class='nav-item' onclick="setActiveItem('dashboard')" id="dashboard-nav-item">
+            <div class='nav-icon-wrapper'>
+                <span class="material-icons">
+                    dashboard
+                </span>
+            </div>
+            <div class="nav-item-text unselectable" id="dashboard-nav-item-text">
+                Dashboard
+            </div>
+        </a>
+        <a class='nav-item' href="../pages/edit-profile.html" onclick="setActiveItem('profile-edit')"
+            id="profile-edit-nav-item">
+            <div class='nav-icon-wrapper'>
+                <span class="material-icons">
+                    account_circle
+                </span>
+            </div>
+            <div class="nav-item-text unselectable" id="profile-edit-nav-item-text">
+                Profile
+            </div>
+        </a>
+    </nav>
+
+    <!-- MOBILE NAVIGATION -->
+    <nav class="mobile-nav">
+        <div class="mobile-nav-icon-wrapper" onclick="setActiveItem('dashboard')" id="dashboard-mobile-nav-item">
+            <a href="./venues.html">
+                <span class="material-icons">
+                    dashboard
+                </span>
+            </a>
+        </div>
+        <div class="mobile-nav-icon-wrapper" onclick="setActiveItem('profile-edit')" id="profile-edit-mobile-nav-item">
+            <a href="./edit-profile.html">
+                <span class="material-icons">
+                    account_circle
+                </span>
+            </a>
+        </div>
+    </nav>
+</body>
+
+</html>

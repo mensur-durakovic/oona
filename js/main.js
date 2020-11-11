@@ -33,9 +33,6 @@ function setActiveItem(newActiveItem) {
   $(`#${newActiveItem}-nav-item`).addClass("nav-item-active");
   $(`#${newActiveItem}-mobile-nav-item`).addClass("mobile-nav-icon-active");
 
-  console.log("newActiveItem", newActiveItem);
-  console.log("activeItem", activeItem);
-
   //navigation hide
   $("#desktop-nav").removeClass("nav-expanded");
   $(".nav-item-text").removeClass("nav-item-text-visible");
@@ -76,4 +73,11 @@ function submitForm() {
   } else {
     return true;
   }
+}
+
+function showCardDetails() {
+  window.location.href = "../pages/show-item-details.html";
+}
+function editItem() {
+  window.location.href = "../pages/edit-item.html";
 }
