@@ -81,3 +81,11 @@ function showCardDetails() {
 function editItem() {
   window.location.href = "../pages/edit-item.html";
 }
+
+function goToUrl(element, e) {
+  if (e.target.alt === "grid item") {
+    const link = $(element).attr("data-href");
+    window.open(link);
+    return false;
+  }
+}
