@@ -1493,18 +1493,14 @@ input[type="radio"] {
       padding: 25px 25px 10px 25px;
       border-radius: 15px;
       position: relative;
-      margin: 30px;
+      margin: 30px 15px;
       max-width: 380px;
       min-width: 380px;
       box-sizing: border-box;
       height: fit-content;
 
       &:first-child {
-        margin: 30px 30px 30px 0;
-      }
-
-      &:last-child {
-        margin: 30px 0 30px 0;
+        margin: 30px 15px 30px 0;
       }
 
       &-title {

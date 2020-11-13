@@ -2029,7 +2029,7 @@ input[type="radio"]:checked {
   padding: 25px 25px 10px 25px;
   border-radius: 15px;
   position: relative;
-  margin: 30px;
+  margin: 30px 15px;
   max-width: 380px;
   min-width: 380px;
   -webkit-box-sizing: border-box;
@@ -2040,11 +2040,7 @@ input[type="radio"]:checked {
 }
 
 .edit-item-form-group:first-child {
-  margin: 30px 30px 30px 0;
-}
-
-.edit-item-form-group:last-child {
-  margin: 30px 0 30px 0;
+  margin: 30px 15px 30px 0;
 }
 
 .edit-item-form-group-title {
