@@ -1907,8 +1907,8 @@ input[type="radio"]:checked {
 }
 
 .show-details-head-info img {
-  width: 400px;
-  height: 265px;
+  width: 300px;
+  height: 180px;
   border-radius: 15px;
   margin: 25px 0;
 }
@@ -2030,8 +2030,8 @@ input[type="radio"]:checked {
   border-radius: 15px;
   position: relative;
   margin: 30px;
-  max-width: 500px;
-  min-width: 500px;
+  max-width: 380px;
+  min-width: 380px;
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
   height: -webkit-fit-content;
