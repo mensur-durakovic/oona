@@ -326,11 +326,17 @@ button {
       color: #8083a3;
     }
 
+    &:required {
+      border-bottom: 1px solid #ea9c9c;
+    }
+
     &-label {
       margin-bottom: 8px;
       font-size: 14px;
       line-height: 21px;
       color: #8083a3;
+      display: flex;
+      align-items: center;
     }
   }
 
@@ -659,9 +665,33 @@ button {
       justify-content: space-between;
     }
 
-    &-text {
+    &-left {
       margin-bottom: 35px;
+      display: flex;
 
+      &-icons {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        margin-right: 15px;
+      }
+
+      &-icon {
+        cursor: pointer;
+        padding: 10px;
+        margin: 0 10px;
+        border-radius: 10px;
+        border: 1px solid #d6cccc;
+        img {
+          width: 25px;
+          min-width: 25px;
+          height: 25px;
+          min-height: 25px;
+        }
+      }
+    }
+
+    &-text {
       font-weight: bold;
       font-size: 32px;
       line-height: 42px;
@@ -681,7 +711,6 @@ button {
       align-items: flex-start;
       justify-content: flex-start;
       position: relative;
-      margin-bottom: 35px;
 
       label {
         margin-bottom: 8px;
@@ -802,12 +831,12 @@ button {
 
         &-disable {
           img {
-            width: 40px;
-            min-width: 40px;
-            max-width: 40px;
-            height: 40px;
-            min-height: 40px;
-            max-height: 40px;
+            width: 35px;
+            min-width: 35px;
+            max-width: 35px;
+            height: 35px;
+            min-height: 35px;
+            max-height: 35px;
             cursor: pointer;
           }
         }
@@ -1121,48 +1150,6 @@ button {
   }
 }
 
-.checkbox-container {
-  display: flex;
-  align-items: flex-start;
-  justify-content: flex-start;
-  position: relative;
-  margin-bottom: 15px;
-  width: 100%;
-
-  &-edit {
-    display: flex;
-    align-items: center;
-    justify-content: flex-start;
-    position: relative;
-    margin-bottom: 25px;
-    min-height: 40px;
-    box-sizing: border-box;
-    width: 100%;
-
-    label {
-      font-size: 18px;
-      line-height: 21px;
-      color: #1a1c1d;
-      min-width: fit-content;
-      margin-right: 15px;
-    }
-  }
-}
-
-.radio-container {
-  display: flex;
-  flex-direction: column;
-  align-items: flex-start;
-  justify-content: flex-start;
-  position: relative;
-  margin-bottom: 15px;
-  width: 100%;
-
-  &-group {
-    margin-bottom: 5px;
-  }
-}
-
 input[type="checkbox"],
 input[type="radio"] {
   --active: #d23737;
@@ -1372,15 +1359,15 @@ input[type="radio"] {
 .show-details {
   display: flex;
   flex-direction: column;
-  align-items: center;
-  justify-content: center;
+  align-items: flex-start;
+  justify-content: flex-start;
   margin-left: 10px;
   text-align: left;
 
   &-content {
     display: flex;
     flex-direction: column;
-    align-items: center;
+    align-items: flex-start;
   }
 
   &-head {
@@ -1413,7 +1400,7 @@ input[type="radio"] {
       }
 
       img {
-        width: 475px;
+        width: 400px;
         height: 265px;
         border-radius: 15px;
         margin: 25px 0;
@@ -1487,14 +1474,38 @@ input[type="radio"] {
 
 .edit-item {
   &-form {
-    min-width: 600px;
+    display: flex;
+    flex-direction: column;
+    //flex-wrap: wrap;
+    //min-width: 600px;
+
+    &-head {
+      display: flex;
+    }
+
+    &-body {
+      display: flex;
+      flex-wrap: wrap;
+    }
 
     &-group {
       border: 1px solid #d6cccc;
       padding: 25px 25px 10px 25px;
       border-radius: 15px;
       position: relative;
-      margin-bottom: 30px;
+      margin: 30px;
+      max-width: 500px;
+      min-width: 500px;
+      box-sizing: border-box;
+      height: fit-content;
+
+      &:first-child {
+        margin: 30px 30px 30px 0;
+      }
+
+      &:last-child {
+        margin: 30px 0 30px 0;
+      }
 
       &-title {
         background-color: white;
@@ -1592,5 +1603,70 @@ input[type="radio"] {
       bottom: -10px;
       margin: 0 auto;
     }
+  }
+}
+
+.checkbox-container {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: flex-start;
+  position: relative;
+  margin-bottom: 15px;
+  width: 100%;
+
+  &-items {
+    display: flex;
+    flex-direction: column;
+    min-height: 40px;
+    align-items: flex-start;
+
+    justify-content: center;
+  }
+
+  &-item {
+    margin-bottom: 5px;
+  }
+
+  &-edit {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    position: relative;
+    margin-bottom: 25px;
+    min-height: 40px;
+    box-sizing: border-box;
+    width: 100%;
+
+    label {
+      font-size: 18px;
+      line-height: 21px;
+      color: #1a1c1d;
+      min-width: fit-content;
+      margin-right: 15px;
+    }
+  }
+}
+
+.radio-container {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: flex-start;
+  position: relative;
+  margin-bottom: 15px;
+  width: 100%;
+
+  &-items {
+    display: flex;
+    flex-direction: column;
+  }
+
+  &-item {
+    margin-bottom: 5px;
+  }
+
+  &-group {
+    margin-bottom: 5px;
   }
 }
